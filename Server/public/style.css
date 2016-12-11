@@ -5,7 +5,15 @@ body {
         background: #99ddff;
 }
 
-.button {background-color: #e6e6e6;} /* Almost white */
+.button {background-color: #e6e6e6;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+  } /* Almost white */
 .button2 {background-color: #e6e6e6;} /* almost white */
 .button3 {background-color: #000000;} /* Blak */
 .button4 {background-color: #ff3300;} /* Red On */
