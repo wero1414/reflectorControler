@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+	<title>Casa victoria</title>
+	<meta name="viewport" content="width=400px" />
+
+	<script src="socket.io/socket.io.js"></script>
+	<link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+	<button class="button" onClick="sendClick('0000')">More</button>
+	<button class="button button2" onClick="sendClick('0001')">Less</button>
+	<button class="button button3" onClick="sendClick('0002')">OFF</button>
+	<button class="button button4" onClick="sendClick('0003')">ON</button>
+  <hr>
+	<button class="button button5" onclick="sendClick('0004')">R</button>
+	<button class="button button6" onclick="sendClick('0005')">G</button>
+  <button class="button button7" onClick="sendClick('0006')">B</button>
+  <button class="button button8" onClick="sendClick('0007')">W</button>
+  <hr>
+	<button class="button button9" onclick="sendClick('0008')"></button>
+	<button class="button button10" onclick="sendClick('0009')"></button>
+  <button class="button button11" onClick="sendClick('0010')"></button>
+  <button class="button button12" onClick="sendClick('0011')">Flash</button>
+  <hr>
+	<button class="button button13" onclick="sendClick('0012')"></button>
+	<button class="button button14" onclick="sendClick('0013')"></button>
+  <button class="button button15" onClick="sendClick('0014')"></button>
+  <button class="button button16" onClick="sendClick('0015')">Strobe</button>
+  <hr>
+	<button class="button button17" onclick="sendClick('0016')"></button>
+	<button class="button button18" onclick="sendClick('0017')"></button>
+  <button class="button button19" onClick="sendClick('0018')"></button>
+  <button class="button button20" onClick="sendClick('0019')">Fade</button>
+  <hr>
+	<button class="button button21" onclick="sendClick('0020')"></button>
+	<button class="button button22" onclick="sendClick('0021')"></button>
+  <button class="button button23" onClick="sendClick('0022')"></button>
+  <button class="button button24" onClick="sendClick('0023')">Smooth</button>
+	<hr>
+	<script type="text/javascript">
+		var socket = io.connect();
+
+		function sendClick($co)
+		{
+			socket.emit('led',{value: $co});
+		}
+	</script>
+  </body>
+</html>
